@@ -9,6 +9,7 @@ import {
 import { Provider } from 'react-redux'
 import Main from './components/layout/Main.jsx';
 import hotelStore from './store/store.js';
+import SmoothScrolling from './components/scroll/SmoothScrolling.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,8 +31,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <SmoothScrolling>
     <Provider store={hotelStore}>
       <RouterProvider router={router} />
     </Provider>
+    </SmoothScrolling>
   </React.StrictMode>,
 )

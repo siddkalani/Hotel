@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'abc-whyte': ['ABC Whyte', 'sans-serif'],
+        'kaftan' : ['Kaftan Serif', 'serif']
+      }
+    },
   },
   plugins: [],
 }
