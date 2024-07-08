@@ -1,12 +1,18 @@
-import {createSlice} from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 
 
 const sidebarSlice = createSlice({
-    name:'sidebar',
-    initialState:false,
-    reducers:{
-        toggleSidebar:(state,action)=>{
-        return !state
+    name: 'sidebar',
+    initialState: {
+        toggle: false
+    }
+    ,
+    reducers: {
+        toggleOpen: (state, action) => {
+            state.toggle = true
+        },
+        toggleClose: (state, action) => {
+            state.toggle = false
         }
     }
 })
