@@ -19,11 +19,13 @@ const Sidebar = () => {
           onClick={handleToggle}
         ></div>
       )}
-    <div className={`${toggle.toggle ? "sidebar h-full fixed left-0 z-[30]":"side-bar-close"}`}>
+    <div className={`${toggle.toggle ? "sidebar h-full fixed left-0 z-[20]":"side-bar-close"}`}>
       <div className='side-nav'>
         <div onClick={handleToggle} className='cross'>
-          <div className='bar'></div>
-          <div className='bar'></div>
+          <div className='cross-btn flex flex-col justify-evenly h-full w-full'>
+          <div className='cross-bar'></div>
+          <div className='cross-bar'></div>
+          </div>
         </div>
         <div className='flex w-full pt-[8vh] p-sidebar'>
           <nav className='w-full flex flex-col'>

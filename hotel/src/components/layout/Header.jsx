@@ -10,7 +10,7 @@ const Header = () => {
     dispatch(sidebarActions.toggleOpen())
   }
   return (
-    <header className='z-[20] fixed w-full p-h '>
+    <header className='z-[2] fixed w-full p-h '>
       <div className='flex items-center bg-transparent justify-between w-full p-nav'>
         <nav className='flex items-center gap-nav '>
           <div className='cheeseburger' onClick={handleOpen}>
