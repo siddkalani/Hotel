@@ -7,11 +7,13 @@ import Sidebar from '../components/sidebar/Sidebar'
 function App() {
 
   return (
-    <div className='w-screen h-screen bg-red-200'>
-      <Header />
-      <Sidebar />
-      <Outlet />
-      <Footer />
+    <div className='w-screen h-screen'>
+      <div className='w-full h-full'>
+        <Header />
+        <Sidebar />
+        <Outlet />
+        <Footer />
+      </div>
     </div>
   )
 }

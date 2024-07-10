@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { useDispatch, useSelector } from 'react-redux';
 import { sidebarActions } from '../../store/slices/siderbarSlice';
@@ -9,10 +9,27 @@ const Header = () => {
   const handleOpen = () => {
     dispatch(sidebarActions.toggleOpen())
   }
+
+    const [scrolling, setScrolling] = useState(false);
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY > 0) {
+          setScrolling(true);
+        } else {
+          setScrolling(false);
+        }
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
   return (
-    <header className='z-[2] fixed w-full p-h '>
+    <header className={`${scrolling ? 'z-[2] fixed w-full p-mobile ' : 'z-[2] fixed w-full md:p-h p-mobile '}`}>
       <div className='flex items-center bg-transparent justify-between w-full p-nav'>
-        <nav className='flex items-center gap-nav '>
+        <nav className='flex items-center gap-nav'>
           <div className='cheeseburger' onClick={handleOpen}>
             <div class="cheeseburger-inner">
               <div class="bar"></div>
@@ -20,8 +37,8 @@ const Header = () => {
               <div class="bar"></div>
             </div>
           </div>
-          <div className='line'></div>
-          <ul className='flex text-[var(--color-white)]'>
+          <div className='md:line hidden'></div>
+          <ul className='md:flex hidden text-[var(--color-white)]'>
             <li className='nav-a'>
               <a href='#' className='flex-custom-center'>
                 <span className='nav-span'>Stay</span>
@@ -50,10 +67,10 @@ const Header = () => {
           </picture>
         </div>
         <div>
-          <div className='btn'>
+          <div className='btn  h-[2em] md:h-[var(--btn-height-small)]'>
             <div className='btn-content'>
-              <span>Book your stay</span>
-              <span className='hidden'>Book</span>
+              <span className='md:flex hidden'>Book your stay</span>
+              <span className='md:hidden'>Book</span>
             </div>
           </div>
         </div>
