@@ -27,7 +27,7 @@ const Header = () => {
       };
     }, []);
   return (
-    <header className={`${scrolling ? 'z-[2] fixed w-full p-mobile ' : 'z-[2] fixed w-full md:p-h p-mobile '}`}>
+    <header className={`${scrolling ? 'z-[2] fixed w-full p-mobile' : 'z-[2] fixed w-full md:p-h p-mobile '}`}>
       <div className='flex items-center bg-transparent justify-between w-full p-nav'>
         <nav className='flex items-center gap-nav'>
           <div className='cheeseburger' onClick={handleOpen}>
@@ -37,8 +37,8 @@ const Header = () => {
               <div class="bar"></div>
             </div>
           </div>
-          <div className='md:line hidden'></div>
-          <ul className='md:flex hidden text-[var(--color-white)]'>
+          <div className='lg:line hidden'></div>
+          <ul className='lg:flex hidden text-[var(--color-white)]'>
             <li className='nav-a'>
               <a href='#' className='flex-custom-center'>
                 <span className='nav-span'>Stay</span>
@@ -69,8 +69,8 @@ const Header = () => {
         <div>
           <div className='btn  h-[2em] md:h-[var(--btn-height-small)]'>
             <div className='btn-content'>
-              <span className='md:flex hidden'>Book your stay</span>
-              <span className='md:hidden'>Book</span>
+              <span className='lg:flex hidden'>Book your stay</span>
+              <span className='lg:hidden'>Book</span>
             </div>
           </div>
         </div>

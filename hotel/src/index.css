@@ -10,6 +10,10 @@
         @apply flex justify-center items-center
     }
 
+    .flex-custom-col {
+        @apply flex flex-col
+    }
+
     /* header css */
     .p-h {
         padding: calc(var(--gap)* 0.5) var(--container-padding);
@@ -18,6 +22,9 @@
 
     .p-mobile {
         padding: calc(var(--gap)* 0) var(--new-padding);
+        transition: var(--animation-nav);
+        transition-delay: 0.1s;
+
     }
 
     .p-nav {
@@ -188,13 +195,13 @@
         transition: var(--animation-slow);
         transition-delay: 0.1s;
         pointer-events: all;
-        position: relative;
+        position: fixed;
         top: 0;
         left: 0;
         width: 37%;
-        height: 100vh;
+        height: 100%;
         z-index: 20;
-        
+
     }
 
     .side-nav {
@@ -383,7 +390,57 @@
         }
     }
 
+    /* main>hero-section */
+    .hero-img {
+        margin-top: calc((var(--card-width) * 1.333333) * -0.666);
+        z-index: 10;
+    }
+
+    .hero-logo {
+        width: calc(var(--title-size) * 0.35);
+        height: calc(var(--title-size) * 0.35);
+    }
+
+    .text-hero-span {
+        color: rgba(var(--color-white-rgb), 0.7);
+    }
+
+    .hero-flex-gap {
+        gap: calc(var(--gap) * 1.5);
+        gap: 2rem;
+    }
+
+    .hero-image {
+        width: 100vw;
+        height: 100vh;
+        background-image: url('/images/section1/poolsidetable-1920x-q72.jpg');
+        background-size: cover;
+        background-position: center;
+        transition: var(--animation-slider);
+    }
+    .hero-image-mobile {
+        width: 100vw;
+        height: 80vh;
+        background-image: url('/images/section1/poolsidetable-1920x-q72.jpg');
+        background-size: cover;
+        background-position: center;
+        transition: var(--animation-slider);
+    }
+
+    .hero-title {
+        max-width: calc(var(--title-size) * 6.5);
+        margin-bottom: var(--gap);
+    }
+
+    .hero-h1 {
+        font-family: 'Kaftan Serif', serif;
+        font-weight: 400;
+        font-size: calc(var(--title-size) * 0.775);
+        line-height: 1.2;
+    }
+
 }
+
 
 
 /* root css */
@@ -465,11 +522,15 @@ body {
     font-size: 16px;
     font-size: clamp(16px, 1.2vw, 19px);
     background-color: var(--color-light);
-    overscroll-behavior-y: none;
+    /* overscroll-behavior-y: none; */
     width: 100%;
     height: 100%;
     -webkit-font-smoothing: antialiased;
     position: relative;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 canvas,
