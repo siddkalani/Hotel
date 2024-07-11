@@ -13,7 +13,7 @@ const HeroSection = () => {
                 </picture>
               </div>
               <div className='text-center'>
-                <span className='mt-[-0.1em] mb-[-0.1em] eyebrow text-hero-span'> A restaurant well worth a journey</span>
+                <span className='span-margin eyebrow text-hero-span'> A restaurant well worth a journey</span>
               </div>
               <div className='hero-title flex-custom-center text-center'>
                 <h1 className='hero-h1 mt-[-0.175em] mb-[-0.25em] text-[var(--color-white)]'>Prize winning Balinese bistro</h1>
