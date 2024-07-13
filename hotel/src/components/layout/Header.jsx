@@ -43,12 +43,13 @@ const Header = () => {
         <nav className='flex items-center gap-nav'>
           <div className='cheeseburger' onClick={handleOpen}>
             <div class="cheeseburger-inner">
-              <div class="bar bg-black"></div>
-              <div class="bar bg-black"></div>
-              <div class="bar bg-black"></div>
+              <div class={`${scrollState.isDarkMode ? "bar bg-black" : "bar"}`}></div>
+              <div class={`${scrollState.isDarkMode ? "bar bg-black" : "bar"}`}></div>
+              <div class={`${scrollState.isDarkMode ? "bar bg-black" : "bar"}`}></div>
             </div>
           </div>
           <div className='lg:line hidden'></div>
+          {/* will be mapped from data */}
           <ul className={`lg:flex hidden ${scrollState.isDarkMode ? 'text-[var(--color-dark)' : 'text-[var(--color-white)]'}`}>
             <li className='nav-a'>
               <a href='#' className='flex-custom-center'>
@@ -76,13 +77,13 @@ const Header = () => {
           <picture>
             <img
               src="/images/symbols/logo.svg"
-              className={`w-[7em] ${scrollState.isDarkMode ? 'invert' : 'filter-white'}`}
+              className={`w-[7em] ${!scrollState.isDarkMode && 'filter-white'}`}
               alt=""
             />
           </picture>
         </div>
         <div>
-          <div className={`btn h-[2em] lg:h-[var(--btn-height-small)] ${scrollState.isDarkMode ? 'bg-white text-black' : ''}`}>
+          <div className={`btn h-[2em] lg:h-[var(--btn-height-small)] ${scrollState.isDarkMode ? 'bg-[var(--color-butterflygreen-900)] text-white' : ''}`}>
             <div className='btn-content'>
               <span className='lg:flex hidden'>Book your stay</span>
               <span className='lg:hidden'>Book</span>
@@ -90,7 +91,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className='border-bottom'></div>
+      <div className={`${scrollState.isDarkMode ? 'bg-[var(--color-border)] border-bottom' : 'border-bottom'}`}></div>
     </header>
   )
 }
