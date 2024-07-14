@@ -2,6 +2,7 @@ import React from 'react'
 import HeroSection from '../pages/content-sections/HeroSection'
 import DiningIntro from '../pages/content-sections/DiningIntro'
 import ParallaxImages from '../pages/content-sections/ParallaxImages'
+import ImageSlider from '../pages/content-sections/ImageSlider'
 DiningIntro
 
 const Main = () => {
@@ -11,6 +12,7 @@ const Main = () => {
       <HeroSection/>
       <DiningIntro/>
       <ParallaxImages/>
+      <ImageSlider/>
       </div>
 
   )
