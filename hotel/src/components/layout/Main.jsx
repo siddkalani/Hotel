@@ -4,6 +4,7 @@ import DiningIntro from '../pages/content-sections/DiningIntro'
 import ParallaxImages from '../pages/content-sections/ParallaxImages'
 import ImageSlider from '../pages/content-sections/ImageSlider'
 import MenuSection from '../pages/content-sections/MenuSection'
+import KitchenPage from '../pages/content-sections/KitchenPage'
 DiningIntro
 
 const Main = () => {
@@ -15,6 +16,7 @@ const Main = () => {
       <ParallaxImages/>
       <ImageSlider/>
       <MenuSection/>
+      <KitchenPage/>
       </div>
 
   )

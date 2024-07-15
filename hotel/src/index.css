@@ -18,6 +18,10 @@
         @apply mt-[-0.1em] mb-[-0.1em]
     }
 
+    .section-padding {
+        @apply pt-[var(--section-padding)] pb-[var(--section-padding)]
+    }
+
     /* ------------------------- Typography -------------------------------------------------- */
     h1, h2, h3, h4, h5, h6, p, a, li, ul, ol, span, strong, em, figcaption {
         padding: 0;
@@ -198,6 +202,24 @@
         flex-shrink: 0;
     }
 
+    .border-top-ornament {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: calc(var(--gap) * 0.5);
+    }
+    .border-top-ornament::before, .border-top-ornament::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: var(--color-border);
+      }
+
     /* typo end */
 
     /* header css */
@@ -377,7 +399,7 @@
     }
 
     .border-top {
-        position:relative;
+        position: relative;
         top: 0;
         left: 0;
         width: 100%;

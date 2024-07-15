@@ -31,14 +31,18 @@ const ImageSlider = () => {
         return () => clearInterval(interval);
     }, []);
 
+    const handlePaginationClick = (index) => {
+        setCurrentIndex(index);
+    };
+
     return (
-        <section className='pt-[var(--section-padding)] pb-[var(--section-padding)]'>
+        <section className='section-padding'>
             <div className='container-custom'>
-                <div className='row-title flex justify-center w-full'>
+            <div className='row-title flex justify-center w-full'>
                     <div className='styled-col items-center justify-center'>
                         <div className='text-center'>
                             <div className='ornament'>
-                            <img src="/images/symbols/section-symbol.svg" alt="" />
+                                <img src="/images/symbols/section-symbol.svg" alt="Ornament" />
                             </div>
                         </div>
                         <div className='text-center'>
@@ -78,6 +82,21 @@ const ImageSlider = () => {
                             ))}
                         </div>
                     </div>
+                </div>
+                <div className='pagination flex gap-2 justify-center items-center mt-4'>
+                    {images1.map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={() => handlePaginationClick(index)}
+                            className={`h-[2.5em] w-[2.5em] rounded-full transition-[var(--animation-slider)] ${
+                                currentIndex === index
+                                    ? 'bg-[var(--color-butterflygreen-900)] text-white shadow-sm'
+                                    : ' shadow-inner text-gray-700 hover:bg-gray-300 box-sha'
+                            }`}
+                        >
+                            {index + 1}
+                        </button>
+                    ))}
                 </div>
             </div>
         </section>
