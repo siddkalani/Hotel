@@ -377,7 +377,7 @@
 
     .btn-content span {
         font-size: var(--copy-size-m);
-        color: var(--color-white);
+        /* color: var(--color-white); */
         font-weight: 400;
         text-align: center;
         width: 100%;
@@ -387,7 +387,14 @@
         transform: translateY(0em) rotate(0.001deg);
         transition: text-shadow var(--animation-smooth);
     }
-
+    .btn-content img {
+        transition: transform var(--animation-nav-smooth); /* Use your defined variable for smooth animation */
+    }
+    
+    /* Apply the rotation on hover of the button */
+    .btn:hover .btn-content img {
+        transform: rotate(90deg);
+    }
     .border-bottom {
         position: absolute;
         bottom: 0;

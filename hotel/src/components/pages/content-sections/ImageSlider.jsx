@@ -33,6 +33,7 @@ const ImageSlider = () => {
 
     const handlePaginationClick = (index) => {
         setCurrentIndex(index);
+        clearInterval(interval)
     };
 
     return (

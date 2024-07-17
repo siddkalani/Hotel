@@ -10,14 +10,15 @@ DiningIntro
 const Main = () => {
   return (
 
-      <div className='w-full h-full relative'>
-      <HeroSection/>
-      <DiningIntro/>
-      <ParallaxImages/>
-      <ImageSlider/>
-      <MenuSection/>
-      <KitchenPage/>
-      </div>
+    <div className='w-full h-full relative'>
+      <HeroSection />
+      <DiningIntro />
+      <ParallaxImages />
+      <ImageSlider />
+      <MenuSection />
+      <KitchenPage />
+      
+    </div>
 
   )
 }
