@@ -7,7 +7,7 @@ const ReservationSection = () => {
             <section className='w-full h-full'>
                 <div className='flex-custom-center h-full w-full'>
                     <Parallax
-                        strength={400}
+                        strength={200}
                         bgImage="https://www.thedamai.com/media/pages/dining/16935f89f6-1703335808/sunsetsceneedit-vignettetight-2880x-q72.jpg"
                         bgImageAlt="Poolside table"
                         bgImageStyle={{ objectFit: "cover" }}

@@ -15,7 +15,7 @@ const KitchenPage = () => {
                         <div className='w-full h-full flex items-center justify-center'>
                             <Parallax
                                 bgImage="https://www.thedamai.com/media/pages/dining/5d61087be9-1703335787/cookbook-1080x1440-crop-q72.jpg"
-                                strength={200}
+                                strength={100}
                             >
                                 <div className='md:h-[40rem] h-[25rem] w-[30rem]'/>
                             </Parallax>
