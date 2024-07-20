@@ -60,7 +60,7 @@ const Sidebar = () => {
         ></div>
       )}
       <div className={`${toggle.toggle ? "sidebar" : "sidebar closed"}`}>
-        <div className='side-nav h-full flex flex-col overflow-y-auto fixed bg-[var(--color-light)] lg:w-[37%] w-full'>
+        <div className='side-nav h-full flex flex-col overflow-y-auto overflow-x-hidden fixed bg-[var(--color-light)] lg:w-[37%] w-screen'>
           <div className='cross flex-custom-center cursor-pointer absolute' onClick={handleToggle}>
             <div className='cross-btn relative'>
               <div className='cross-bar'></div>
@@ -69,7 +69,7 @@ const Sidebar = () => {
           </div>
           <SideNav handleToggle={handleToggle} />
           <ShortLinks />
-          <FooterSidebar />
+          {/* <FooterSidebar /> */}
         </div>
       </div>
     </>
