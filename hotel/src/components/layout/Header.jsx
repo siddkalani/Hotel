@@ -4,6 +4,8 @@ import { sidebarActions } from '../../store/slices/siderbarSlice';
 
 const Header = () => {
   const dispatch = useDispatch()
+  const [activeItem, setActiveItem] = useState('Stay')
+  
   const handleOpen = () => {
     dispatch(sidebarActions.toggleOpen())
   }
@@ -48,29 +50,21 @@ const Header = () => {
               <div class={`${scrollState.isDarkMode ? "bar bg-black" : "bar"}`}></div>
             </div>
           </div>
-          <div className='lg:line hidden'></div>
+          <div className={`lg:line hidden ${scrollState.isDarkMode ? 'bg-[var(--color-border-active)]' : 'bg-[var(--color-border-active-light)]'}`}></div>
           {/* will be mapped from data */}
-          <ul className={`lg:flex hidden ${scrollState.isDarkMode ? 'text-[var(--color-dark)' : 'text-[var(--color-white)]'}`}>
-            <li className='nav-a'>
-              <a href='#' className='flex-custom-center'>
-                <span className='nav-span'>Stay</span>
-              </a>
-            </li>
-            <li className='nav-a'>
-              <a href='#' className='flex-custom-center'>
-                <span className='nav-span'>Dining</span>
-              </a>
-            </li>
-            <li className='nav-a'>
-              <a href='#' className='flex-custom-center'>
-                <span className='nav-span'>Relax</span>
-              </a>
-            </li>
-            <li className='nav-a'>
-              <a href='#' className='flex-custom-center'>
-                <span className='nav-span'>Discover</span>
-              </a>
-            </li>
+          <ul className={`lg:flex hidden ${scrollState.isDarkMode ? 'text-[var(--color-dark)]' : 'text-[var(--color-white)]'}`}>
+            {['Stay', 'Dining', 'Relax', 'Discover'].map((item, index) => (
+              <li key={index} className='nav-a'>
+                <a href='#' className='flex-custom-center relative overflow-hidden group'>
+                  <span className='nav-span inline-block transition-all duration-300 ease-in-out transform group-hover:-translate-y-full group-hover:opacity-0'>
+                    {item}
+                  </span>
+                  <span className='nav-span absolute top-full left-0 w-full transition-all duration-300 ease-in-out transform group-hover:-translate-y-full'>
+                    {item}
+                  </span>
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
         <div className='logo'>

@@ -21,7 +21,17 @@
     .section-padding {
         @apply pt-[var(--section-padding)] pb-[var(--section-padding)]
     }
-
+    .btn {
+        @apply relative overflow-hidden;
+      }
+      
+      .btn-content {
+        @apply relative w-full h-full;
+      }
+      
+      .btn-content > span {
+        @apply flex items-center justify-center w-full h-full;
+      }
     /* ------------------------- Typography -------------------------------------------------- */
     h1, h2, h3, h4, h5, h6, p, a, li, ul, ol, span, strong, em, figcaption {
         padding: 0;
@@ -242,9 +252,9 @@
 
     .line {
         width: 1.2px;
-        height: calc(var(--copy-size-m)* 1.5);
+        height: calc(var(--copy-size-m)* 1.3);
         display: block;
-        background-color: var(--color-border-active-light);
+        /* background-color: var(--color-border-active-light); */
         transition: var(--animation-nav);
     }
 
@@ -293,7 +303,7 @@
         height: 1px;
         transition: transform 0.3s ease;
     }
-
+    
     /* menu btn animation on hover; */
     .cheeseburger:hover {
         .bar:nth-child(1) {
