@@ -367,7 +367,6 @@
         border-radius: var(--border-radius);
         height: var(--btn-height-small);
         transition: var(--animation-nav);
-        
     }
 
     .btn-content {
@@ -400,7 +399,6 @@
     .btn:hover .second-img {
         transform: rotate(90deg);
     }
-
     .btn:hover .first-img {
         transform: rotate(-90deg);
     }
@@ -732,38 +730,16 @@
         justify-content: center;
     }
 
-    .svg-new>* {
+    .svg-new > * {
         fill: var(--color-butterflygreen-500);
     }
 
-    .svg-new {
+    .svg-new{
         width: calc(var(--copy-size-m) * 1.2);
         display: block;
         flex-shrink: 0;
         transform: rotate(0.001deg);
         transition: transform var(--animation-smooth);
-    }
-
-    .footer-visual {
-        translate: none;
-        rotate: none;
-        scale: none;
-        transform: translate(0%, -0.3125%) translate3d(0px, 0px, 0px);
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        padding: var(--section-padding) 0;
-    }
-
-    .footer-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
     }
 }
 

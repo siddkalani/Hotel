@@ -5,12 +5,12 @@ import { Parallax } from 'react-parallax';
 const Footer = () => {
   return (
     <>
-      <footer className='p-0 relative'>
+      {/* <footer className='p-0 relative'>
         <div className='max-w-[100vw] pl-0 pr-0'>
-          <div className='relative flex w-full justify-between'>
-            <div className='border-custom'></div>
+          <div className='relative flex w-full flex-wrap justify-between'>
+            <div className='border-custom'></div> */}
             {/* SideNav */}
-            <nav className='footer-nav'>
+            {/* <nav className='footer-nav'>
               <div className='menu-title'><span className='eyebrow small'>Menu</span></div>
               <ul className='menu-list'>
                 {["Stay", "Relax", "Dining", "Discover"].map((item, index) => (
@@ -21,9 +21,9 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
-            </nav>
+            </nav> */}
             {/* ShortLinks */}
-            <div className='footer-nav flex'>
+            {/* <div className='footer-nav flex'>
               <div className="border-left"></div>
               <div className="flex flex-col min-w-[10em]">
                 <div className='column-title'><span className='eyebrow small'>stay</span></div>
@@ -45,7 +45,7 @@ const Footer = () => {
               </div>
             </div>
             {/* contacts */}
-            <div className='footer-nav flex'>
+            {/* <div className='footer-nav flex'>
               <div className="border-left"></div>
               <div className="flex flex-col min-w-[10em]">
                 <div className='column-title'><span className='eyebrow small'>Contacts</span></div>
@@ -63,9 +63,9 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div>  */}
           {/* footer-end */}
-          <div className='relative flex w-full justify-between'>
+          {/* <div className='relative flex w-full justify-between'>
             <div className="border-custom"></div>
 
             <div className="footer-end flex justify-around items-center">
@@ -104,29 +104,29 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
       {/* imageWithButton */}
       <section className='w-full h-full'>
-  <div className='flex-custom-center h-full w-full relative'>
-    <Parallax
-      strength={100}
-      speed={100}
-      bgImage="https://www.thedamai.com/media/pages/dining/5975de972d-1703335793/footer-menu-1920x480-crop-q72.jpg"
-      bgImageAlt="Poolside table"
-      bgImageStyle={{ objectFit: "cover" }}
-    >
-      <div style={{ height: '35vh' }} className='hero-image flex-custom-center'>
-        <div className={`btn w-15 btn-svg h-[3rem] border-[0.5px] border-black bg-[var(--color-butterflygreen-900)] absolute z-10`}>
-          <div className='btn-content gap-3'>
-            <img className='size-4 first-img' src="/images/symbols/footer-btn.svg" alt="" />
-            <span className='text-[white]'>Order your copy</span>
-            <img className='size-4 second-img' src="/images/symbols/footer-btn.svg" alt="" />
-          </div>
+        <div className='flex-custom-center h-full w-full relative'>
+          <Parallax
+            strength={100}
+            speed={100}
+            bgImage="https://www.thedamai.com/media/pages/dining/5975de972d-1703335793/footer-menu-1920x480-crop-q72.jpg"
+            bgImageAlt="Poolside table"
+            bgImageStyle={{ objectFit: "cover" }}
+          >
+            <div style={{ height: '35vh' }} className='hero-image flex-custom-center'>
+              <div className={`btn w-15 btn-svg h-[3rem] border-[0.5px] border-black bg-[var(--color-butterflygreen-900)] absolute z-10`}>
+                <div className='btn-content gap-3'>
+                  <img className='size-4 first-img' src="/images/symbols/footer-btn.svg" alt="" />
+                  <span className='text-[white]'>Order your copy</span>
+                  <img className='size-4 second-img' src="/images/symbols/footer-btn.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </Parallax>
         </div>
-      </div>
-    </Parallax>
-  </div>
-</section>
+      </section>
     </>
   )
 }
