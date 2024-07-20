@@ -21,17 +21,7 @@
     .section-padding {
         @apply pt-[var(--section-padding)] pb-[var(--section-padding)]
     }
-    .btn {
-        @apply relative overflow-hidden;
-      }
-      
-      .btn-content {
-        @apply relative w-full h-full;
-      }
-      
-      .btn-content > span {
-        @apply flex items-center justify-center w-full h-full;
-      }
+    
     /* ------------------------- Typography -------------------------------------------------- */
     h1, h2, h3, h4, h5, h6, p, a, li, ul, ol, span, strong, em, figcaption {
         padding: 0;

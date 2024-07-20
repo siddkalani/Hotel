@@ -77,7 +77,7 @@ const Header = () => {
           </picture>
         </div>
         <div>
-          <div className={`btn h-[2em] lg:h-[var(--btn-height-small)] ${scrollState.isDarkMode ? 'bg-[var(--color-butterflygreen-900)] text-white' : ''}`}>
+          <div className={`btn h-[2em] hover:shadow-md lg:h-[var(--btn-height-small)] ${scrollState.isDarkMode ? 'bg-[var(--color-butterflygreen-900)] text-white' : ''}`}>
             <div className='btn-content'>
               <span className='lg:flex hidden text-white'>Book your stay</span>
               <span className='lg:hidden text-white'>Book</span>
