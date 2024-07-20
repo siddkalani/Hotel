@@ -36,9 +36,9 @@ const KitchenPage = () => {
                                 </div>
                                 <div className={`btn w-15 btn-svg h-[3rem] border-[0.5px] border-black bg-transparent`}>
                                     <div className='btn-content gap-3'>
-                                        <img className='size-4' src="/images/symbols/section-symbol.svg" alt="Ornament" />
+                                        <img className='size-4 first-img' src="/images/symbols/section-symbol.svg" alt="Ornament" />
                                         <span className='text-[var(--color-dark)]'>Order your copy</span>
-                                        <img className='size-4' src="/images/symbols/section-symbol.svg" alt="Ornament" />
+                                        <img className='size-4 second-img' src="/images/symbols/section-symbol.svg" alt="Ornament" />
                                     </div>
                                 </div>
                             </div>

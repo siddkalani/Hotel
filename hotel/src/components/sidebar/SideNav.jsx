@@ -1,7 +1,7 @@
 import React from 'react'
 
 const SideNav = () => {
-    return(
+  return (
     <div className='side-nav-content'>
       <nav className='nav-menu'>
         <div className='menu-title'><span className='eyebrow small'>Menu</span></div>
@@ -16,7 +16,7 @@ const SideNav = () => {
         </ul>
       </nav>
     </div>
-    )
+  )
 };
 
 export default SideNav
